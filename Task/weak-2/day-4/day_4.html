@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DAY 3 - Counter App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .counter-box {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            width: 250px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            font-size: 50px;
+            margin: 20px 0;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .inc { background: green; color: white; }
+        .dec { background: red; color: white; }
+        .reset { background: gray; color: white; }
+    </style>
+</head>
+<body>
+
+<div class="counter-box">
+    <h2>Counter App</h2>
+    <h1 id="count">0</h1>
+
+    <button class="inc">+</button>
+    <button class="dec">-</button>
+    <button class="reset">Reset</button>
+</div>
+
+<script>
+    // Selecting elements
+    let countEl = document.getElementById("count");
+    let incBtn = document.querySelector(".inc");
+    let decBtn = document.querySelector(".dec");
+    let resetBtn = document.querySelector(".reset");
+
+    let count = 0;
+
+    // Increment
+    incBtn.addEventListener("click", function() {
+        count++;
+        countEl.innerText = count;
+    });
+
+    // Decrement
+    decBtn.addEventListener("click", function() {
+        count--;
+        countEl.innerText = count;
+    });
+
+    // Reset
+    resetBtn.addEventListener("click", function() {
+        count = 0;
+        countEl.innerText = count;
+    });
+</script>
+
+</body>
+</html>

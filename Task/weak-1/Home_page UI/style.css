@@ -1,0 +1,71 @@
+/* Universal Selector */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+}
+
+/* Header */
+header {
+    padding: 15px;
+    text-align: right;
+}
+
+header a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+}
+
+/* Main Section */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 150px;
+}
+
+/* Google Logo */
+.logo {
+    width: 280px;
+    margin-bottom: 20px;
+}
+
+/* Search Box */
+.search-box {
+    width: 500px;
+    padding: 12px;
+    border-radius: 25px;
+    border: 1px solid #dcdcdc;
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+.buttons button {
+    padding: 10px 16px;
+    margin: 5px;
+    border: none;
+    background-color: #f8f9fa;
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    border: 1px solid #ccc;
+}
+
+/* Footer */
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #f2f2f2;
+    padding: 10px;
+    font-size: 14px;
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DAY 2 - Student Marks List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            padding: 20px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .pass {
+            color: green;
+        }
+        .fail {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2>Student Marks</h2>
+    <p id="studentName"></p>
+    <ul id="marksList"></ul>
+    <p><b>Passed Marks (≥ 50)</b></p>
+    <ul id="passList"></ul>
+</div>
+
+<script>
+    // Object
+    let student = {
+        name: "Amit",
+        marks: [45, 78, 62, 30, 90]
+    };
+
+    // Console Output
+    console.log("Student Name:", student.name);
+    console.log("Original Marks:", student.marks);
+
+    // push & pop
+    student.marks.push(88); // add mark
+    student.marks.pop();    // remove last mark
+
+    // map() - add 5 grace marks
+    let updatedMarks = student.marks.map(mark => mark + 5);
+    console.log("Marks after Grace:", updatedMarks);
+
+    // filter() - passed marks
+    let passedMarks = updatedMarks.filter(mark => mark >= 50);
+    console.log("Passed Marks:", passedMarks);
+
+    // UI Display
+    document.getElementById("studentName").innerText =
+        "Name: " + student.name;
+
+    let marksList = document.getElementById("marksList");
+    updatedMarks.forEach(mark => {
+        let li = document.createElement("li");
+        li.innerText = mark;
+        li.className = mark >= 50 ? "pass" : "fail";
+        marksList.appendChild(li);
+    });
+
+    let passList = document.getElementById("passList");
+    passedMarks.forEach(mark => {
+        let li = document.createElement("li");
+        li.innerText = mark;
+        passList.appendChild(li);
+    });
+</script>
+
+</body>
+</html>
+
+
