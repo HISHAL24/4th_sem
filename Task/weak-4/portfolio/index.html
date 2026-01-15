@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hishal MT | Portfolio</title>
+
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+<!-- Custom CSS -->
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+<div class="container">
+<a class="navbar-brand" href="#home">Hishal MT</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navMenu">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+<li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+<li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+<li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+</ul>
+</div>
+</div>
+</nav>
+
+<!-- Home -->
+<section id="home" class="hero text-center">
+<div class="container">
+<h1 class="display-4 fw-bold">Hishal M T</h1>
+<p class="lead">B.Tech Computer Science Engineering Student</p>
+<p>Malappuram, Kerala, India</p>
+<a href="#projects" class="btn btn-light btn-lg">View Projects</a>
+</div>
+</section>
+
+<!-- About -->
+<section id="about" class="section">
+<div class="container">
+<h2 class="text-center">About Me</h2>
+<p class="text-center">Highly motivated Computer Science Engineering student with interest in software development, Python, and web technologies.</p>
+</div>
+</section>
+
+<!-- Education -->
+<section id="education" class="section bg-light">
+<div class="container">
+<h2 class="text-center">Education</h2>
+<ul class="list-group">
+<li class="list-group-item">B.Tech CSE – Mentor Academy (Pursuing)</li>
+<li class="list-group-item">Higher Secondary – MES HSS Mampad</li>
+<li class="list-group-item">High School – MES HSS Mampad</li>
+</ul>
+</div>
+</section>
+
+<!-- Skills -->
+<!-- Skills -->
+<section id="skills" class="section">
+  <div class="container">
+    <h2 class="text-center mb-5">Skills</h2>
+
+    <div class="row g-4">
+
+      <div class="col-md-3">
+        <div class="skill-card">
+          <h5>C</h5>
+          <div class="progress">
+            <div class="progress-bar" style="width: 80%;">80%</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="skill-card">
+          <h5>Python</h5>
+          <div class="progress">
+            <div class="progress-bar bg-success" style="width: 85%;">85%</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="skill-card">
+          <h5>HTML & CSS</h5>
+          <div class="progress">
+            <div class="progress-bar bg-warning" style="width: 90%;">90%</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="skill-card">
+          <h5>JavaScript</h5>
+          <div class="progress">
+            <div class="progress-bar bg-info" style="width: 75%;">75%</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Projects -->
+<section id="projects" class="section bg-light">
+<div class="container">
+<h2 class="text-center">Projects</h2>
+<div class="row">
+
+
+<!-- Weather App -->
+<div class="col-md-4">
+<div class="card p-3">
+<h5>Weather App</h5>
+<input type="text" id="city" class="form-control mb-2" placeholder="Enter city">
+<button class="btn btn-primary" onclick="getWeather()">Get Weather</button>
+<p id="weatherResult" class="mt-2"></p>
+</div>
+</div>
+
+<!-- ToDo App -->
+<div class="col-md-4">
+<div class="card p-3">
+<h5>To-Do App</h5>
+<input type="text" id="task" class="form-control mb-2" placeholder="New Task">
+<button class="btn btn-success" onclick="addTask()">Add</button>
+<ul id="taskList"></ul>
+</div>
+</div>
+
+
+<!-- Billing -->
+<div class="col-md-4">
+<div class="card p-3">
+<h5>Billing System</h5>
+<p>Python Tkinter billing system with MySQL integration.</p>
+</div>
+</div>
+
+
+</div>
+</div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="section">
+<div class="container">
+<h2 class="text-center">Contact Me</h2>
+<form onsubmit="sendEmail(event)" class="col-md-6 mx-auto">
+<input type="text" id="name" class="form-control mb-2" placeholder="Your Name" required>
+<input type="email" id="email" class="form-control mb-2" placeholder="Your Email" required>
+<textarea id="message" class="form-control mb-2" placeholder="Message" required></textarea>
+<button class="btn btn-primary w-100">Send</button>
+</form>
+</div>
+</section>
+
+
+<!-- Footer -->
+<footer class="text-center bg-dark text-light p-3">
+© 2026 Hishal MT
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
